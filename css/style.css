@@ -47,7 +47,7 @@ ol[class] {
   list-style: none;
 }
 
-/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+/* Элементы a сбрасываем до дефолтных стилей */
 a {
   text-decoration: none;
 }
@@ -80,7 +80,7 @@ select {
   background-color: #000000;
 }
 .section--height_sm {
-  max-height: 36px;
+  max-height: 40px;
 }
 .section--variant_default {
   background-color: #f5f5f5;
@@ -100,7 +100,7 @@ select {
     margin: 0 auto;
   }
   .section {
-    padding: 10px 0;
+    padding: 0 0;
   }
 }
 
@@ -160,6 +160,11 @@ select {
 }
 .cell--10 {
   width: 10%;
+  padding: 0 10px;
+  margin: 10px 0
+}
+.cell--12 {
+  width: 12%;
   padding: 0 10px;
   margin: 10px 0
 }
@@ -283,6 +288,9 @@ select {
   }
   .cell--80-sm {.
   width: 80%;
+  }
+  .cell--85-sm {.
+  width: 85%;
   }
   .cell--90-sm {
     width: 90%;
@@ -439,7 +447,7 @@ select {
   font-size: 16px;
 }
 .caption--size_1 {
-  font-size: 60px;
+  font-size: 57px;
 }
 .caption--size_2 {
   font-size: 40px;
@@ -469,13 +477,13 @@ select {
   line-height: 1.5;
 }
 .caption--variant_primary {
-  color: white
-}
-.caption--variant_secondary {
-  color: #445161
+  color: #ffffff
 }
 .caption--variant_secondary_lite {
-  color: #333
+  color: #445161
+}
+.caption--variant_secondary {
+  color: #000000
 }
 .caption--variant_secondary_grey {
   color: #989898;
@@ -530,27 +538,34 @@ select {
 .list--items_decimal {
   list-style: decimal;
 }
-
-/* реализация через псевдоэлемент */
-.list--variant_check .list__item {
-  position: relative;
-}
-.list--variant_check .list__item:before {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 19px;
-  background-image: url(../img/check_icon.png);
-  left: -35px;
-  top: 2px;
+.list--border_right {
+  border-right: 2px solid #ffffff;
+  border-right-width: ;
 }
 
 /* реализация через псевдоэлемент */
+/*.list--variant_check .list__item {*/
+/*  position: relative;*/
+/*}*/
+/*.list--variant_check .list__item:before {*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  width: 25px;*/
+/*  height: 19px;*/
+/*  background-image: url(../img/check_icon.png);*/
+/*  left: -35px;*/
+/*  top: 2px;*/
+/*}*/
+/* реализация через псевдоэлемент */
+
 .list--offset_left_md {
   margin-left: 35px;
 }
 .list--offset_left_sm {
   margin-left: 20px;
+}
+.list--offset_gorizontal_md {
+  margin: 0 35px 0;
 }
 
 /* Работа с картинками */
@@ -582,6 +597,9 @@ select {
 .aspect-ratio--ratio_4x3 {
   padding-bottom: 75%
 }
+.aspect-ratio--ratio_1x2 {
+  padding-bottom: 66.66%
+}
 .aspect-ratio--ratio_1x1 {
   padding-bottom: 100%
 }
@@ -592,7 +610,7 @@ select {
   min-width: 1px;
 }
 .card__element {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 .card__element--offset_bottom_md {
   padding-bottom: 30px;
@@ -629,6 +647,15 @@ select {
 }
 .card__element--offset_full_md {
   padding: 16px;
+}
+.card__element--offset_full_1md {
+  padding: 18px;
+}
+.card__element--offset_full_2md {
+  padding: 20px;
+}
+.card__element--offset_full_3md {
+  padding: 22px;
 }
 .card__element--background_relief {
   background-color: #eaeaea;
